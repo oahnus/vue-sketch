@@ -11,6 +11,17 @@ export default new Router({
       component: resolve => require(['../pages/Home.vue'], resolve)
     },
     {
+      path: '/scroll',
+      name: 'Scroll',
+      component: resolve => require(['../pages/cube/Scroll.vue'], resolve)
+    },
+
+    {
+      path: '/markdown',
+      name: 'Markdown',
+      component: resolve => require(['../pages/Markdown.vue'], resolve)
+    },
+    {
       path: '/1024',
       name: 'img-1024',
       component: resolve => require(['../pages/fun/Img1024.vue'], resolve)

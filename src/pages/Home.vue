@@ -34,6 +34,8 @@
     <router-link to="/MarqueeTips">Marquee</router-link><br>
     <router-link to="/LoginDemo">LoginDemo</router-link><br>
     <router-link to="/1024">Img 1024</router-link><br>
+    <router-link to="/markdown">MarkdownJs</router-link><br>
+    <router-link to="/scroll">BetterScroll</router-link><br>
 
     <select id="soflow-color">
       <!-- This method is nice because it doesn't require extra div tags, but it also doesn't retain the style across all browsers. -->
@@ -55,6 +57,9 @@
 <script>
   import Select from '../components/select/SelectDemo'
 
+  import Originator from '../domain/memento/originator'
+  import CareTaker from '../domain/memento/catetaker'
+
   export default {
     components: {
       'o-select': Select
@@ -72,6 +77,9 @@
       }
     },
     created() {
+      this.testMementoPattern()
+
+      this.testClipboard()
     },
     mounted() {
     },
@@ -79,7 +87,36 @@
     },
     beforeRouteUpdate() {
     },
-    methods: {},
+    methods: {
+      testClipboard() {
+        navigator.clipboard.readText()
+                .then(text => {
+                  console.log('Pasted content: ', text);
+                })
+                .catch(err => {
+                  console.error('Failed to read clipboard contents: ', err);
+                });
+      },
+
+      testMementoPattern() {
+        let o = new Originator()
+        let c = new CareTaker()
+        console.log(c)
+        o.setState('state1')
+        o.setState('state2')
+        let m = o.createMemento()
+        c.saveMemento(m)
+        o.setState('state3')
+        console.log(o.getState())
+        c.saveMemento(o.createMemento())
+        console.log(c)
+        o.setState('state4')
+        c.saveMemento(o.createMemento())
+        o.restoreMemento(c.retire(2))
+        console.log(o.getState())
+
+      }
+    },
     filters: {},
     computed: {},
     watch: {}
