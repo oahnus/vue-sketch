@@ -5,15 +5,29 @@ import router from './router'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 
-import Aside from 'vue-blu/src/components/aside'
-// import 'vue-blu/dist/css/vue-blu.min.css'
 Vue.config.productionTip = false
 
-import Blu from 'vue-blu'
+import {
+  Field,
+  Button,
+  CellGroup, Cell,
+  AddressList, Area,
+  Collapse, CollapseItem,
+  DatetimePicker, Picker, Popup, Icon,
+  Row, Col,
+  Radio, RadioGroup,
+  Panel
+} from 'vant'
+import 'vant/lib/index.css';
+
+Vue.use(Field).use(Cell).use(CellGroup)
+  .use(Collapse).use(CollapseItem)
+  .use(DatetimePicker).use(Popup)
+  .use(AddressList).use(Area).use(Picker)
+  .use(Button).use(Icon)
+  .use(Row).use(Col).use(Radio).use(RadioGroup).use(Panel);
+
 Vue.use(ElementUI)
-// Vue.use(Blu)
-// Vue.component('b-side', Aside)
-// Vue.use(VueBlu)
 /* eslint-disable no-new */
 import vSelect from 'vue-select'
 Vue.component('v-select', vSelect)

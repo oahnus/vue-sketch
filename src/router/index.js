@@ -4,57 +4,69 @@ import Router from 'vue-router'
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
-      name: 'Home',
-      component: resolve => require(['../pages/Home.vue'], resolve)
+      name: 'DashBoard',
+      component: resolve => require(['../pages/Dashboard.vue'], resolve)
     },
     {
-      path: '/scroll',
-      name: 'Scroll',
-      component: resolve => require(['../pages/cube/Scroll.vue'], resolve)
-    },
-
-    {
-      path: '/markdown',
-      name: 'Markdown',
-      component: resolve => require(['../pages/Markdown.vue'], resolve)
+      path: '/dialog',
+      name: 'Dialog',
+      component: resolve => require(['../pages/DialogDemo.vue'], resolve)
     },
     {
-      path: '/1024',
-      name: 'img-1024',
-      component: resolve => require(['../pages/fun/Img1024.vue'], resolve)
+      path: '/hr',
+      name: 'HR',
+      component: resolve => require(['../pages/Hr.vue'], resolve)
     },
     {
-      path: '/ElemeFEPopup',
-      name: 'elemefe-popup',
-      component: resolve => require(['../pages/BluAside.vue'], resolve)
+      path: '/card',
+      name: 'Card',
+      component: resolve => require(['../pages/CardPage.vue'], resolve)
     },
     {
-      path: '/ElemeFEDialog',
-      name: 'elemefe-Dialog',
-      component: resolve => require(['../pages/ElemeFEDialog.vue'], resolve)
+      path: '/calendar',
+      name: 'Calendar',
+      component: resolve => require(['../pages/Calendar.vue'], resolve)
     },
     {
-      path: '/Audio',
-      name: 'elemefe-audio',
+      path: '/scanner',
+      name: 'Scanner',
+      component: resolve => require(['../pages/Scanner.vue'], resolve)
+    },
+    {
+      path: '/aside',
+      name: 'aside',
+      component: resolve => require(['../pages/Aside.vue'], resolve)
+    },
+    {
+      path: '/eleAudio',
+      name: 'eleAudio',
       component: resolve => require(['../pages/ElemeFEAudio.vue'], resolve)
     },
     {
-      path: '/FileUpload',
-      name: 'elemefe-upload',
-      component: resolve => require(['../pages/ElemeFileUpload.vue'], resolve)
+      path: '/mobile',
+      name: 'mobile',
+      component: resolve => require(['../pages/mobile/Mobile.vue'], resolve),
+      children: [
+        // {
+        //   path: '/mobile/marqueeTips',
+        //   name: 'marqueeTips',
+        //   component: resolve => require(['../pages/mobile/VueMarqueeTips.vue'], resolve)
+        // },
+        {
+          path: '/mobile/scrollTabBar',
+          name: 'scrollTabBar',
+          component: resolve => require(['../pages/mobile/ScrollTabBar.vue'], resolve)
+        },
+      ]
     },
     {
-      path: '/MarqueeTips',
-      name: 'marquee-tips',
-      component: resolve => require(['../pages/mobile/VueMarqueeTips.vue'], resolve)
+      path: '/native/styledSelect',
+      name: 'styledSelect',
+      component: resolve => require(['../pages/nativeStyle/NativeStyledSelect.vue'], resolve)
     },
-    {
-      path: '/LoginDemo',
-      name: 'login-demo',
-      component: resolve => require(['../pages/LoginDemo.vue'], resolve)
-    }
   ]
 })

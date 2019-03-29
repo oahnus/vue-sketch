@@ -11,15 +11,26 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "better-scroll": "^1.12.6",
+    "dayjs": "^1.8.0",
     "element-ui": "latest",
     "less": "^3.8.0",
     "less-loader": "^4.1.0",
     "markdown": "^0.5.0",
+    "mint-ui": "^2.0.4",
+    "scanner": "^0.0.2",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.2",
+    "vant": "^1.5.5",
     "vue": "^2.5.2",
     "vue-blu": "^0.1.9",
+    "vue-cookie": "^1.1.4",
+    "vue-cropper": "^0.4.9",
+    "vue-marquee-tips": "^1.0.7",
     "vue-popup": "latest",
-    "vue-router": "^3.0.1"
+    "vue-router": "^3.0.1",
+    "vue-select": "^2.5.1"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",

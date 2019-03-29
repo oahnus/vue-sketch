@@ -1,11 +1,19 @@
 <style scoped>
-
+  #mobile-container {
+    width: 375px;
+    height: 667px;
+    text-align: center;
+    border: 2px solid #333;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+  }
 </style>
 
 <template>
-  <section>
-    <v-select v-model="selected"></v-select>
-  </section>
+  <div id="mobile-container">
+    <router-view></router-view>
+  </div>
 </template>
 
 <script>
@@ -25,17 +33,14 @@
       }
     },
     methods: {},
-    filters: {},
     computed: {},
     watch: {
-      '$route'(from, to) {
+      '$route'(to, from) {
       }
     },
     created() {
     },
     mounted() {
-    },
-    updated() {
     },
   }
 </script>

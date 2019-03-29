@@ -1,15 +1,16 @@
 <style scoped="">
-
+  #ele-audio {
+    margin: 20px;
+  }
 </style>
 
 <template>
-  <div>
+  <div id="ele-audio">
     <o-audio :src="url"
              :theControlList="controlList"
              displayType="text"
              border
     ></o-audio>
-    <audio :src="url" controls></audio>
   </div>
 </template>
 

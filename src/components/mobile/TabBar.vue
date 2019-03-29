@@ -2,7 +2,7 @@
   #tab-bar{
     width: 100%;
     overflow: hidden;
-    padding:5px;
+    padding: 5px 0;
     border-bottom: 1px solid #ddd;
     border-top: 1px solid #ddd;
 
@@ -118,8 +118,7 @@
       })
     },
     mounted() {
-    },
-    updated() {
+
     },
   }
 </script>

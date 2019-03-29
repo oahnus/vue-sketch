@@ -4,7 +4,13 @@
 
 <template>
   <div>
-    <b-aside :width="800" :is-show="isShowRight" title="Right Aside!" :showFooter="false" placement="right" :backdrop="false" @close="isShowRight=false">
+    <o-aside :width="800"
+             :is-show="isShowRight"
+             title="Right Aside!"
+             :showFooter="false"
+             placement="right"
+             :backdrop="true"
+             @close="isShowRight=false">
       <h3>Dolor sit amet</h3>
       <p>Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo,
         fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
@@ -14,8 +20,10 @@
         fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
       </p>
       <p><code>右侧Aside并且不显示footer</code></p>
-    </b-aside>
-    <el-button @click="isShowRight = true" >右侧模态框</el-button>
+    </o-aside>
+    <div style="display: flex;justify-content: center;height: 500px;align-items: center">
+      <el-button type="primary" @click="isShowRight = true" >右侧模态框</el-button>
+    </div>
   </div>
 </template>
 
@@ -25,7 +33,7 @@
 
   export default {
     components: {
-      'b-aside': Aside
+      'o-aside': Aside
     },
     props: {},
     data() {

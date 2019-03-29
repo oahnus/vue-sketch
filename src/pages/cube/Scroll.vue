@@ -9,7 +9,7 @@
       </ul>
     </div>
 
-    <div>
+    <div style="width: 300px;">
       <o-tab-bar @click="tabClick" type="obj" obj-prop-name="title" :tab-items="itemList"></o-tab-bar>
     </div>
   </div>
@@ -26,54 +26,16 @@
     data() {
       return{
         itemList:[
-          {
-            'title':'关注'
-          },
-          {
-            'title':'推荐'
-          },
-          {
-            'title':'深圳'
-          },
-          {
-            'title':'视频'
-          },
-          {
-            'title':'音乐'
-          },
-          {
-            'title':'热点'
-          },
-          {
-            'title':'新时代'
-          },
-          {
-            'title':'娱乐'
-          },
-          {
-            'title':'头条号'
-          },
-          {
-            'title':'问答'
-          },
-          {
-            'title':'图片'
-          },
-          {
-            'title':'科技'
-          },
-          {
-            'title':'体育'
-          },
-          {
-            'title':'财经'
-          },
-          {
-            'title':'军事'
-          },
-          {
-            'title':'国际'
-          }
+          {'title':'新时代'},
+          {'title':'娱乐'},
+          {'title':'头条号'},
+          {'title':'问答'},
+          {'title':'图片'},
+          {'title':'科技'},
+          {'title':'体育'},
+          {'title':'财经'},
+          {'title':'军事'},
+          {'title':'国际'}
         ]
       }
     },
