@@ -147,7 +147,6 @@
                 name: 'Calendar',
                 desc: '日历'
               },
-
             ]
           },
           native: {

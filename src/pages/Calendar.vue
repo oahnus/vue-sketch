@@ -30,19 +30,7 @@
 
 <template>
   <div id="Calendar">
-    <div class="header">
-
-    </div>
-    <div class="week">
-      <div class="box" :key="index" v-for="(item, index) in ['日', '一', '二', '三', '四', '五', '六']">
-        {{item}}
-      </div>
-    </div>
-    <div class="date-con">
-      <div class="box"
-           :key="index"
-           v-for="(item, index) in dates">{{item}}</div>
-    </div>
+    <calendar></calendar>
   </div>
 </template>
 
@@ -54,8 +42,12 @@
 
   const days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
+  import Calendar from '../components/Calendar'
+
   export default {
-    components: {},
+    components: {
+      Calendar
+    },
     props: {
       // width: {
       //   type: Number,

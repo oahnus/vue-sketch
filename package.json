@@ -21,6 +21,7 @@
     "less-loader": "^4.1.0",
     "markdown": "^0.5.0",
     "mint-ui": "^2.0.4",
+    "moment": "^2.24.0",
     "scanner": "^0.0.2",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2",
