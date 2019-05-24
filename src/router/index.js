@@ -22,6 +22,16 @@ export default new Router({
       component: resolve => require(['../pages/Hr.vue'], resolve)
     },
     {
+      path: '/excel',
+      name: 'excel',
+      component: resolve => require(['../pages/Excel.vue'], resolve)
+    },
+    {
+      path: '/compressorjs',
+      name: 'compressorjs',
+      component: resolve => require(['../pages/Compressorjs.vue'], resolve)
+    },
+    {
       path: '/card',
       name: 'Card',
       component: resolve => require(['../pages/CardPage.vue'], resolve)
