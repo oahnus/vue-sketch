@@ -22,14 +22,34 @@ export default new Router({
       component: resolve => require(['../pages/Hr.vue'], resolve)
     },
     {
+      path: '/qiniu',
+      name: 'qiniu',
+      component: resolve => require(['../pages/QiNiuUpload.vue'], resolve)
+    },
+    {
       path: '/excel',
       name: 'excel',
       component: resolve => require(['../pages/Excel.vue'], resolve)
     },
     {
+      path: '/excelBeautify',
+      name: 'excelBeautify',
+      component: resolve => require(['../pages/excelBeautify.vue'], resolve)
+    },
+    {
+      path: '/scroll',
+      name: 'scroll',
+      component: resolve => require(['../pages/nativeStyle/ScrollBarDemo.vue'], resolve)
+    },
+    {
       path: '/compressorjs',
       name: 'compressorjs',
       component: resolve => require(['../pages/Compressorjs.vue'], resolve)
+    },
+    {
+      path: '/ws',
+      name: 'ws',
+      component: resolve => require(['../pages/WebSocketDemo.vue'], resolve)
     },
     {
       path: '/card',

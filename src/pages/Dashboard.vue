@@ -109,6 +109,8 @@
   import Originator from '../domain/memento/originator'
   import CareTaker from '../domain/memento/catetaker'
 
+  import axios from 'axios'
+
   export default {
     components: {
     },
@@ -176,6 +178,13 @@
       this.testMementoPattern()
 
       this.testClipboard()
+
+      axios({
+        url: '/test/cache',
+        method: 'get',
+      }).then(resp => {
+        console.log(resp)
+      })
     },
     mounted() {
     },
