@@ -106,31 +106,37 @@
       FileSelector
     },
     props: {
+      // 原始图片容器宽度
       containerWidth: {
         type: Number,
         default: 400
       },
+      // 原始图片容器高度
       containerHeight: {
         type: Number,
         default: 300,
       },
+      // 裁剪图片最小高度
       cropMinHeight: {
         type: Number,
         default: 90,
       },
+      // 裁剪图片最小宽度
       cropMinWidth: {
         type: Number,
         default: 160,
       },
+      // 是否裁剪任意宽高
       cropRandom: {
         type: Boolean,
         default: false,
       },
-
+      // 是否压缩原始图片
       needCompressOriImg: {
         type: Boolean,
         default: true
       },
+      // 压缩质量
       compQuality: {
         type: Number,
         default: 0.8
