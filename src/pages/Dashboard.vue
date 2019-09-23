@@ -106,9 +106,6 @@
 </template>
 
 <script>
-  import Originator from '../domain/memento/originator'
-  import CareTaker from '../domain/memento/catetaker'
-
   import axios from 'axios'
 
   export default {
@@ -149,6 +146,21 @@
                 name: 'Calendar',
                 desc: '日历'
               },
+              {
+                path: '/ws',
+                name: 'WebSocketDemo',
+                desc: 'WebSocket'
+              },
+              {
+                path: '/img-crop',
+                name: '图片裁剪',
+                desc: 'cropperjs图片裁剪'
+              },
+              {
+                path: '/clipboard',
+                name: '剪贴板demo',
+                desc: '剪贴板demo'
+              }
             ]
           },
           native: {
@@ -158,6 +170,11 @@
                 path: '/native/styledSelect',
                 name: '带样式的原生select',
                 desc: '原生select美化'
+              },
+              {
+                path: '/scroll',
+                name: 'scroll滚动条demo',
+                desc: 'Scroll滚动条自动滚动到底部'
               },
             ]
           },
@@ -174,62 +191,11 @@
         }
       }
     },
-    created() {
-      this.testMementoPattern()
-
-      this.testClipboard()
-
-      axios({
-        url: '/test/cache',
-        method: 'get',
-      }).then(resp => {
-        console.log(resp)
-      })
-    },
-    mounted() {
-    },
-    updated() {
-    },
-    beforeRouteUpdate() {
-    },
     methods: {
-
       selectCard(routerPath) {
         console.log('%c[Home-selectCard]', 'color: #63ADD1', routerPath)
         this.$router.push(routerPath)
       },
-
-      testClipboard() {
-        navigator.clipboard.readText()
-                .then(text => {
-                  console.log('Pasted content: ', text);
-                })
-                .catch(err => {
-                  console.error('Failed to read clipboard contents: ', err);
-                });
-      },
-
-      testMementoPattern() {
-        let o = new Originator()
-        let c = new CareTaker()
-        console.log(c)
-        o.setState('state1')
-        o.setState('state2')
-        let m = o.createMemento()
-        c.saveMemento(m)
-        o.setState('state3')
-        console.log(o.getState())
-        c.saveMemento(o.createMemento())
-        console.log(c)
-        o.setState('state4')
-        c.saveMemento(o.createMemento())
-        o.restoreMemento(c.retire(2))
-        console.log(o.getState())
-
-      }
     },
-    filters: {},
-    computed: {},
-    watch: {}
   }
 </script>

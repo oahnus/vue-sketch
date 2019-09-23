@@ -5,11 +5,10 @@
 
 <template>
   <div id="WebSocketDemo">
-    <el-input v-model="input" style="width: 200px"></el-input>
-    <br>
-    <el-input type="file" v-model="imgFile"></el-input>
-    <br>
-    <el-button @click="send">Send</el-button>
+    <div style="margin: 30px;">
+      <el-input v-model="input" style="width: 200px" placeholder="enter message"></el-input>
+      <el-button @click="send">Send</el-button>
+    </div>
   </div>
 </template>
 

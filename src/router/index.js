@@ -27,6 +27,11 @@ export default new Router({
       component: resolve => require(['../pages/QiNiuUpload.vue'], resolve)
     },
     {
+      path: '/clipboard',
+      name: 'clipboard',
+      component: resolve => require(['../pages/ClipboardDemo.vue'], resolve)
+    },
+    {
       path: '/img-crop',
       name: 'img-crop',
       component: resolve => require(['../pages/ImageCropperDemo.vue'], resolve)
