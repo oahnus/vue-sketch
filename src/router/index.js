@@ -27,6 +27,11 @@ export default new Router({
       component: resolve => require(['../pages/QiNiuUpload.vue'], resolve)
     },
     {
+      path: '/img-crop',
+      name: 'img-crop',
+      component: resolve => require(['../pages/ImageCropperDemo.vue'], resolve)
+    },
+    {
       path: '/excel',
       name: 'excel',
       component: resolve => require(['../pages/Excel.vue'], resolve)
