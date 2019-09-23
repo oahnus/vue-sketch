@@ -95,7 +95,9 @@
    */
   import {mapGetters} from 'vuex'
   import Cropper from 'cropperjs'
+  // https://github.com/fengyuanchen/cropperjs/blob/master/README.md#options
   import Compressor from 'compressorjs'
+  // https://github.com/fengyuanchen/compressorjs
 
   import FileSelector from './FileSelector'
 
